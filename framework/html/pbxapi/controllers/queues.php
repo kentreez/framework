@@ -506,6 +506,7 @@ class queues extends rest {
 
         // Add astdb to response and reformat field results if needed
         foreach($rows as $idx=>$row) {
+            $allstaticmembers = array();
             $agents = isset($astdb[$row['extension']]['agents'])?$astdb[$row['extension']]['agents']:array();
             $rows[$idx]['dynamic_members']=$agents;
             $rows[$idx]['restrict_dynamic_agents']=$astdb[$row['extension']]['dynmemberonly'];
@@ -606,6 +607,7 @@ class queues extends rest {
 
         // Add astdb to response and reformat field results if needed
         foreach($rows as $idx=>$row) {
+            $allstaticmembers = array();
             $agents = isset($astdb[$row['extension']]['agents'])?$astdb[$row['extension']]['agents']:array();
             $rows[$idx]['dynamic_members']=$agents;
             $rows[$idx]['restrict_dynamic_agents']=$astdb[$row['extension']]['dynmemberonly'];
